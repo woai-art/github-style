@@ -1,0 +1,46 @@
+baseURL = "https://tuttech.net/"  # Укажите ваш домен или URL сайта
+languageCode = "en-us"              # Или "ru" для русского языка
+title = "TUTTECH"                  # Название сайта
+theme = "github-style"              # Указываем используемую тему
+pygmentsCodeFences = true           # Подсветка кода
+pygmentsUseClasses = true           # Использовать классы для стилей подсветки
+
+# Подключение последних изменений постов
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[params]
+  author = "woaa"
+  description = "AI, science and technology news"
+  github = "https://github.com/woai-art"          # Ссылка на ваш профиль GitHub
+  email = "woaa@tuttech.net"  # Ваш email
+  rss = true                    # Включить RSS
+  lastmod = true                # Отображать дату последнего изменения
+  enableGitalk = true           # Включить поддержку Gitalk (если нужно)
+  enableSearch = true           # Локальный поиск
+  favicon = "/images/ava1.png"  # Иконка сайта
+  avatar = "/images/ava2.png"    # Ваш аватар
+
+[outputs]
+  home = ["html", "json"]
+
+[outputFormats.json]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = false
+
+[params]
+  custom_css = ["css/custom.css"]
+  custom_js = ["js/custom.js"]
+
+[params.gitalk]
+  clientID = "Ov23likqDoPeeFKYypUi"               # Укажите ваш Client ID
+  clientSecret = "b92fb8383805dea01c53f96f3606bc074d953e64"       # Укажите ваш Client Secret
+  repo = "woai-art/tuttech.net"           # Например, "username.github.io"
+  owner = "woai-art"                 # Ваш GitHub логин
+  admin = "woai-art"                 # Администратор GitHub (обычно ваш логин)
+  labels = "comments"                    # Метка для комментариев
+  perPage = 15                         # Количество комментариев на странице
+  pagerDirection = "last"                # Направление сортировки комментариев
+  createIssueManually = false            # Автоматическое создание Issues
+  distractionFreeMode = false            # Режим без отвлекающих факторов
